@@ -4,7 +4,9 @@ This doc is copy from [Microsoft C#](https://docs.microsoft.com/en-us/dotnet/csh
 Before write bugs , read it!
 
 # C# Coding Conventions (C# Programming Guide)
-Coding conventions serve the following purposes:
+
+为什么需要编程规范？
+所谓的编程规范都是为了满足以下需求：
 
 They create a consistent look to the code, so that readers can focus on content, not layout.
 
@@ -16,7 +18,7 @@ They demonstrate C# best practices.
 
 The guidelines in this topic are used by Microsoft to develop samples and documentation.
 
-# Naming Conventions
+# 命名规范
 In short examples that do not include using directives, use namespace qualifications. If you know that a namespace is imported by default in a project, you do not have to fully qualify the names from that namespace. Qualified names can be broken after a dot (.) if they are too long for a single line, as shown in the following example.
 
 ```
@@ -26,18 +28,17 @@ var currentPerformanceCounterCategory = new System.Diagnostics.
 
 You do not have to change the names of objects that were created by using the Visual Studio designer tools to make them fit other guidelines.
 
-# Layout Conventions
+# 换行规范
 Good layout uses formatting to emphasize the structure of your code and to make the code easier to read. Microsoft examples and samples conform to the following conventions:
 
 Use the default Code Editor settings (smart indenting, four-character indents, tabs saved as spaces). For more information, see Options, Text Editor, C#, Formatting.
 
-Write only one statement per line.
-
-Write only one declaration per line.
+一行注释只写一句，有且只有一句。
+一行中制作一次声明
 
 If continuation lines are not indented automatically, indent them one tab stop (four spaces).
 
-Add at least one blank line between method definitions and property definitions.
+在属性和方法的声明定义之间至少需要一行的空格
 
 Use parentheses to make clauses in an expression apparent, as shown in the following code.
 
@@ -48,15 +49,14 @@ if ((val1 > val2) && (val1 > val3))
 }
 ```
 
-# Commenting Conventions
-- Place the comment on a separate line, not at the end of a line of code.
+# 注释规范
+- 另起一行写注释，而不是写在句子末尾
 
 - Begin comment text with an uppercase letter.
 
 - End comment text with a period.
 
-- Insert one space between the comment delimiter (//) and the comment text, as shown in the following example.
-
+- 在双斜线的后面添加一个空格：
 ```
 // The following declaration creates a query. It does not run
 // the query.
