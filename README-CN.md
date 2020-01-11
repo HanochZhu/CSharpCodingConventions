@@ -54,7 +54,7 @@ if ((val1 > val2) && (val1 > val3))
 
 - Begin comment text with an uppercase letter.
 
-- End comment text with a period.
+- 在每一个注释的结尾需要添加一个句号.
 
 - 在双斜线的后面添加一个空格：
 ```
@@ -63,12 +63,12 @@ if ((val1 > val2) && (val1 > val3))
 ```
 - Do not create formatted blocks of asterisks around comments.
 
-# Language Guidelines
+# 语言部分
 The following sections describe practices that the C# team follows to prepare code examples and samples.
-## String Data Type
 
-当合并短字符串的时候，使用字符串插入（C#6.0）
-Use string interpolation to concatenate short strings, as shown in the following code.
+## 字符串
+
+- 当合并短字符串的时候，使用字符串插入（C#6.0）
 
 ```
 string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
@@ -114,7 +114,7 @@ var inputInt = Console.ReadLine();
 Console.WriteLine(inputInt);
 ```
 
-- Avoid the use of var in place of dynamic.
+- 避免使用var 在动态语句中
 
 - Use implicit typing to determine the type of the loop variable in for and foreach loops.
 
@@ -146,7 +146,7 @@ Console.WriteLine();
 ## Unsigned Data Type
 - In general, use int rather than unsigned types. The use of int is common throughout C#, and it is easier to interact with other libraries when you use int.
 
-## Arrays
+## 数组
 - Use the concise syntax when you initialize arrays on the declaration line.
 
 ```
@@ -190,7 +190,7 @@ Del exampleDel2 = DelMethod;
 Del exampleDel1 = new Del(DelMethod);
 ```
 
-## try-catch and using Statements in Exception Handling
+## 处理异常抛出
 - Use a try-catch statement for most exception handling.
 
 ```
@@ -231,7 +231,7 @@ using (Font font2 = new Font("Arial", 10.0f))
 }
 ```
 
-## && and || Operators
+## && 和 ||
 
 - To avoid exceptions and increase performance by skipping unnecessary comparisons, use && instead of & and || instead of | when you perform comparisons, as shown in the following example.
 
@@ -256,7 +256,7 @@ else
     Console.WriteLine("Attempted division by 0 ends up here.");
 }
 ```
-## New Operator
+## 新的操作符
 - Use the concise form of object instantiation, with implicit typing, as shown in the following declaration.
 
 ```
@@ -284,7 +284,7 @@ instance4.Location = "Redmond";
 instance4.Age = 2.3;
 ```
 
-## Event Handling
+## 事件句柄
 
 - If you are defining an event handler that you do not need to remove later, use a lambda expression.
 
@@ -312,9 +312,9 @@ void Form1_Click(object sender, EventArgs e)
     MessageBox.Show(((MouseEventArgs)e).Location.ToString());
 }
 ```
-## Static Members
+## 静态成员
 - Call static members by using the class name: ClassName.StaticMember. This practice makes code more readable by making static access clear. Do not qualify a static member defined in a base class with the name of a derived class. While that code compiles, the code readability is misleading, and the code may break in the future if you add a static member with the same name to the derived class.
-## LINQ Queries
+## LINQ 查询语句
 - Use meaningful names for query variables. The following example uses seattleCustomers for customers who are located in Seattle
 ```
 var seattleCustomers = from customer in customers
