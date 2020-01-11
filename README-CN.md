@@ -67,6 +67,7 @@ if ((val1 > val2) && (val1 > val3))
 The following sections describe practices that the C# team follows to prepare code examples and samples.
 ## String Data Type
 
+当合并短字符串的时候，使用字符串插入（C#6.0）
 Use string interpolation to concatenate short strings, as shown in the following code.
 
 ```
