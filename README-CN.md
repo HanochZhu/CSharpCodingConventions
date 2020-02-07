@@ -74,7 +74,7 @@ The following sections describe practices that the C# team follows to prepare co
 string displayName = $"{nameList[n].LastName}, {nameList[n].FirstName}";
 ```
 
-- To append strings in loops, especially when you are working with large amounts of text, use a StringBuilder object.
+- 当要组合多个字符串的时候，应当使用StringBuilder对象，而不是直接使用‘+’。
 
 ```
 var phrase = "lalalalalalalalalalalalalalalalalalalalalalalalalalalalalala";
